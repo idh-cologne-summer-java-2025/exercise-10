@@ -6,7 +6,7 @@ Fortgeschrittene Programmierung (Java 2)
 
 Klonen Sie dieses Repository direkt in Eclipse und importieren Sie das Maven-Projekt. Legen Sie einen neuen Branch an, den Sie nach Ihrem GitHub-Benutzernamen benennen.
 
-Sie müssten jetzt die Übung 9 lösen können. Dies ist die letzte obligatorische Übung für dieses Semester, Übung 10 zählt nicht mehr in die nötigen Abgaben für die Studienleistung! 
+**Sie müssten jetzt die Übung 9 lösen können. Diese ist auch die letzte obligatorische Übung für dieses Semester, Übung 10 zählt nicht mehr in die nötigen Abgaben für die Studienleistung!** 
 
 ## Aufgabe 1 [fakultativ, ggfs kommen wir nicht so weit]
 
