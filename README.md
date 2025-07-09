@@ -6,8 +6,9 @@ Fortgeschrittene Programmierung (Java 2)
 
 Klonen Sie dieses Repository direkt in Eclipse und importieren Sie das Maven-Projekt. Legen Sie einen neuen Branch an, den Sie nach Ihrem GitHub-Benutzernamen benennen.
 
+Sie müssten jetzt die Übung 9 lösen können. Dies ist die letzte obligatorische Übung für dieses Semester, Übung 10 zählt nicht mehr in die nötigen Abgaben für die Studienleistung! 
 
-## Aufgabe 1
+## Aufgabe 1 [fakultativ, ggfs kommen wir nicht so weit]
 
 In der Klasse `idh.java.ATM` finden Sie eine vereinfachte Version des Geldautomaten, den wir früher schonmal gesehen haben. Der Automat kennt jetzt keine Banken oder Kontos mehr, sondern gibt nur noch die passende Stückelung an Scheinen für einen Betrag aus. Dies passiert in der Methode `convertToBills(int amount)`, die ein `int[]` zurückliefert. Verstehen Sie zunächst wie diese Methode funktioniert. 
 
