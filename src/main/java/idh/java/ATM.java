@@ -79,23 +79,27 @@ public class ATM  {
 	 * @throws IllegalInputException 
 	 */
 	protected int[] convertToBills(int amount) throws IllegalInputException {
-		// illegal amount
-		if (amount < 0)
-			return new int[] {0,0,0,0,0,0,0};
-		
-		// return array for the different bill types
-		int[] r = new int[7];
-		
-		// iterate over the possible pill types
-		// order is important here! Need to go from largest to smallest.
-		for (int i = 0;  i < value_of_bills.length; i++) {
-			r[i] = amount / value_of_bills[i];
-			amount = amount % value_of_bills[i];		
-		}
-		if (amount > 0) {
-			throw new IllegalInputException();
-		}
-		return r;
+	    // If the amount is negative, it's considered illegal. Return an array of zeros.
+	    if (amount < 0)
+	        return new int[] {0, 0, 0, 0, 0, 0, 0}; // Each value corresponds to a bill type.
+
+	    // Create a result array to hold how many of each bill should be used.
+	    int[] r = new int[7]; // One slot for each bill type (500, 200, ..., 5)
+
+	    // Go through each bill type from highest to lowest.
+	    // This ensures we use the fewest number of bills possible.
+	    for (int i = 0; i < value_of_bills.length; i++) {
+	        r[i] = amount / value_of_bills[i];        // Determine how many of this bill fit into the amount.
+	        amount = amount % value_of_bills[i];      // Reduce the remaining amount accordingly and give it to the next smaller bill type.
+	    }
+
+	    // If there's still a remaining amount after processing all bill types,
+	    // it means the input was not divisible by 5 and can't be represented in available bills.
+	    if (amount > 0) {
+	        throw new IllegalInputException();        // Signal invalid input with an exception
+	    }
+
+	    return r; // Return the array containing the needed bills.
 	}
 	
 	
@@ -107,7 +111,7 @@ public class ATM  {
 		atm.run();
 	};
 	
-	class IllegalInputException extends Exception {
+	public static class IllegalInputException extends Exception {
 
 		private static final long serialVersionUID = 1L;
 		
