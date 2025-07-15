@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class ATM  {
 	
 	// initial cash in the ATM
-	int cash = 100;
+	int cash = 10000;
 		
 	// Which banknotes do we have?
 	int[] value_of_bills = new int[] {500, 200, 100, 50, 20, 10, 5};
@@ -107,7 +107,7 @@ public class ATM  {
 		atm.run();
 	};
 	
-	class IllegalInputException extends Exception {
+	public static class IllegalInputException extends Exception {
 
 		private static final long serialVersionUID = 1L;
 		
