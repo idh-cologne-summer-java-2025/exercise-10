@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import idh.java.ATM.IllegalInputException;
+
 public class ATMTest {
 
     private ATM atm;
@@ -29,9 +31,8 @@ public class ATMTest {
 
     @Test
     public void testConvertToBills_LargeAmount() throws ATM.IllegalInputException {
-        int amount = 1885;                                // Large input amount
         int[] expected = new int[] {3, 1, 1, 1, 1, 1, 1};  // Expected: 3x500, 1x200, 1x100, 1xx50, 1x20, 1x10, 1x5
-        int[] actual = atm.convertToBills(amount);        // Call method with 1885
+        int[] actual = atm.convertToBills(1885);        // Call method with 1885
         assertArrayEquals(expected, actual);              // Should return minimal number of bills
     }
 
